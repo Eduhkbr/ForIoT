@@ -1,0 +1,71 @@
+
+ body{
+  background-image: url(../img/wll.jpg);
+  background-repeat: no-repeat;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+.item2 { grid-area: menu; padding: 10px}
+.item3 { grid-area: main;}
+.item4 { grid-area: right; padding: 10px;}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'main main main right right right'
+    'main main main right right right'
+    'main main main menu menu menu'
+    'main main main menu menu menu';
+  grid-gap: 10px;
+  padding: 10px;
+  margin: 10%;
+  background-color:  #4763ff;
+}
+
+.grid-container > div {
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px 20px;
+}
+.btc{
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+.btc:hover{
+  opacity: 0.8;
+  background-color: orange;
+  color: black;
+
+}
+.inp, select {
+width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+/* Personalização dos botões de envio */
+input[type="button"]{
+    width: 30%!important; /* tamanho*/
+    cursor: pointer;  /* tipo do mouse ao posicionar encima do botão */
+    background: rgb(44, 56, 55); /* cor de fundo doss botões */
+    color: #fff; /* cor da letra */
+    font-size: 20px;  /* tamanho da letra, sem responsividade */
+    border: 1px solid #fff; /* tamanho da borda dos botões, tipo solido e a cor */
+    text-shadow: 0 1px 1px #333; /* Sombra do texto do botões */
+
+    transition: all 0.2s linear; /* tempo de transição entre a cor do botão para a outra cor ao passar o mouse por cima */
+}
+
+input[type="button"]:hover{
+    background: #4ab3c6; /* Cor do botão apos passar o mouse por cima */
+  }

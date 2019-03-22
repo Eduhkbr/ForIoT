@@ -1,0 +1,200 @@
+
+/* Fundo de todo o site, por tras das grids e divs*/
+main {
+
+ display: grid;
+ align-items: center;
+ background: #87cefa;
+ grid-template-areas:
+ "slider"
+ "projeto"
+ "produto"
+ "grupo";
+ /* por definição, as áreas do grid ocuparão toda a largura da tela, 
+ como é exatamente isso que queremos, não precisamos especificar a largura */
+}
+
+/*comportamento do H1 dentro da main*/
+main h1 {
+
+  background: rgb(71, 99, 255);
+  width: 100%;
+  font-size: 2em;
+  max-height: 10vh;
+  padding-left: 5%;
+}
+/*Comportamento do H2 dentro da main*/
+main h2 {
+  padding: 2vh;
+}
+
+/* AREA DE PROJETOS */
+.projeto {
+  grid-area: projeto;
+  background: #fafafa;
+  display: flex; /* o que estiver dentro de projetos, vai se comportar como flex (no caso, as caixas) */
+  flex-wrap: wrap; /* diz ao navegador que, se a tela diminuir, pode pular os elementos para linha debaixo */
+
+}
+
+/* título que esta acima das caixas e diz JÁ IMAGINOU CONTROLAR SUA PANELA COM O CELULAR? */
+.projeto h1 {
+  background: rgb(13, 92, 129);
+  color: white; /* cor das LETRAS branca */
+  font-family: sans-serif; /* fonte sem serifa (vai mostrar qualquer uma padrão do navegador */
+  font-weight: 100; /* deixa as letras mais finas ou grossas */
+  max-width: 100%; /* em relação à mãe, que seria a div projeto */
+  font-size: 1.5em; /* tamanho da fonte */
+  max-height: 5vh; /* altura máxima 5/100 do tamanho da tela do usuário */
+  padding: 1vh; /* da espaço entre o texto e as bordas da caixa */
+  text-align: center; /* centraliza o texto */
+  text-transform: uppercase;  /* deixa as letras em maiúsculas */
+}
+
+
+.caixa {
+  flex: 1; /* ocupa o espaço inteiro que a tela tiver */
+  padding: 5vh; /* da espaço entre os elementos e as bordas da caixa */
+  position: relative;
+  background: #01b7c5;
+  display: grid; /* o que estiver dentro da caixa se comportará como grid */
+  grid-template-areas: 
+  "imagem"
+  "titulo"
+}
+
+/* título de cada uma das caixas */
+.caixa h2 {
+  grid-area: titulo;
+  max-width: 100%; /* em relação à mãe, que seria a div caixa */
+  max-height: 5vh; /* altura máxima 5/100 do tamanho da tela do usuário */
+  padding: 1vh; /* da espaço entre o texto e as bordas da caixa */
+
+  font-size: 1em; /* tamanho da fonte */
+  text-align: center; /* centraliza o texto */
+  text-transform: uppercase; /* deixa as letras em maiúsculas */
+}
+
+/*Comportamento da imagem dentro da caixa*/
+.caixa img {
+  grid-area: imagem;
+   max-height: 20vh;
+  justify-self: center; /* Justifica o item do grid em relação ao eixo x (horizontal). Justifica em relação a célula. */
+  align-self: center; /* Justifica o item do grid em relação ao eixo y (vertical). Alinha em relação a célula. */
+}
+
+/* configurações da caixa quando o mouse passar por cima dela */
+
+.caixa:hover > .overlay {
+  position: absolute; /* tira o "caixa hover" do documento, ela fica posicionada relacionada ao seu antecessor (que seria o caixa sem hover */
+  width: 100%; /* o overlay (tela escura com texto) ocupa 100% da caixa */
+  height: 100%; /* o overlay (tela escura com texto) ocupa 100% da caixa */
+  background-color:#000;
+  opacity:0.5; 
+  display: block;
+}
+
+.info {
+display: none;
+position: absolute; 
+top: 100px;
+left: 0;
+text-align: center;
+}
+
+
+/* AREA SOBRE O PRODUTO */
+.produto {
+  grid-area: produto;
+}
+
+/* título que esta acima das caixas e diz JÁ IMAGINOU CONTROLAR SUA PANELA COM O CELULAR? */
+.produto h1 {
+  background: rgb(13, 92, 129);
+  color: white; /* cor das LETRAS branca */
+  font-family: sans-serif; /* fonte sem serifa (vai mostrar qualquer uma padrão do navegador */
+  font-weight: 100; /* deixa as letras mais finas ou grossas */
+  max-width: 100%; /* em relação à mãe, que seria a div projeto */
+  font-size: 1.5em; /* tamanho da fonte */
+  max-height: 5vh; /* altura máxima 5/100 do tamanho da tela do usuário */
+  padding: 1vh; /* da espaço entre o texto e as bordas da caixa */
+  text-align: center; /* centraliza o texto */
+  text-transform: uppercase;  /* deixa as letras em maiúsculas */
+}
+
+.flex-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.produto img {
+  width: 40vh;
+  height: 40vh;
+  padding: 2vh;
+}
+
+.produto p {
+  width: 40vh;
+  height: 40vh;
+  padding: 2vh;
+  text-align: justify;
+  align-content: center;
+
+}
+
+
+
+
+
+/* AREA SOBRE O GRUPO */
+.grupo {
+  grid-area: grupo;
+  overflow: hidden;
+}
+
+.grupo h1 {
+  background: rgb(13, 92, 129);
+  color: white; /* cor das LETRAS branca */
+  font-family: sans-serif; /* fonte sem serifa (vai mostrar qualquer uma padrão do navegador */
+  font-weight: 100; /* deixa as letras mais finas ou grossas */
+  max-width: 100%; /* em relação à mãe, que seria a div projeto */
+  font-size: 1.5em; /* tamanho da fonte */
+  max-height: 5vh; /* altura máxima 5/100 do tamanho da tela do usuário */
+  padding: 1vh; /* da espaço entre o texto e as bordas da caixa */
+  text-align: center; /* centraliza o texto */
+  text-transform: uppercase;  /* deixa as letras em maiúsculas */
+  overflow: hidden;
+}
+/*Comportamento do ul dentro da classe grupo*/
+.grupo ul {
+  display: flex; /* todos os elementos da lista se comportarão como flex */
+  flex-wrap: wrap; /* quando a tela diminuir, os elementos vão pular para linha debaixo */
+  justify-content: center; /* alinha itens horizontalmente no centro */
+  align-items: center; /* alinha itens verticalmente no centro */
+  list-style: none; /* retira o estilo padrão do mavegador da lista - no caso tira a bolinha de cada item (li) - no caso, casa item é um membro do grupo */
+  align-content: space-between; /* da um espaço entre cada membro */
+  overflow: hidden;
+}
+/*Comportamento da li dentro da classe grupo*/
+.grupo li {
+  overflow: hidden;
+  padding: 3vh;
+  min-width: 20vh;
+}
+/*Comportamento do H3 dentro da classe grupo*/
+.grupo h3 {
+  overflow: hidden;
+  line-height: 3vh;
+  font-weight: 700;
+  text-align: center;
+  margin: 1vh;
+    color: white; 
+}
+
+.foto {
+  border-radius: 50%; /* borda da imagem em 50%, é o que transforma ela em um círculo! */
+  max-width: 20vh; /* tamanho máximo de largura das imagens, assim mesmo se elas forem muito grandes, se manterão proporcionais à 20/100 do tamanhod da tela do usuário */
+  min-height: 20vh; /* altura mínima das imagens - assim a gente faz elas ficarem todas do mesmo tamanho */
+}
