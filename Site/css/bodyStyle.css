@@ -17,7 +17,7 @@ main {
 /*comportamento do H1 dentro da main*/
 main h1 {
 
-  background: rgb(71, 99, 255);
+  background: #4b47ff;
   width: 100%;
   font-size: 2em;
   max-height: 10vh;
@@ -31,7 +31,7 @@ main h2 {
 /* AREA DE PROJETOS */
 .projeto {
   grid-area: projeto;
-  background: #fafafa;
+  background: #87cefa;
   display: flex; /* o que estiver dentro de projetos, vai se comportar como flex (no caso, as caixas) */
   flex-wrap: wrap; /* diz ao navegador que, se a tela diminuir, pode pular os elementos para linha debaixo */
 
@@ -39,7 +39,7 @@ main h2 {
 
 /* título que esta acima das caixas e diz JÁ IMAGINOU CONTROLAR SUA PANELA COM O CELULAR? */
 .projeto h1 {
-  background: rgb(13, 92, 129);
+  background: #4b47ff;
   color: white; /* cor das LETRAS branca */
   font-family: sans-serif; /* fonte sem serifa (vai mostrar qualquer uma padrão do navegador */
   font-weight: 100; /* deixa as letras mais finas ou grossas */
@@ -56,7 +56,7 @@ main h2 {
   flex: 1; /* ocupa o espaço inteiro que a tela tiver */
   padding: 5vh; /* da espaço entre os elementos e as bordas da caixa */
   position: relative;
-  background: #01b7c5;
+  background: #87cefa;
   display: grid; /* o que estiver dentro da caixa se comportará como grid */
   grid-template-areas: 
   "imagem"
@@ -110,7 +110,7 @@ text-align: center;
 
 /* título que esta acima das caixas e diz JÁ IMAGINOU CONTROLAR SUA PANELA COM O CELULAR? */
 .produto h1 {
-  background: rgb(13, 92, 129);
+  background: #4b47ff;
   color: white; /* cor das LETRAS branca */
   font-family: sans-serif; /* fonte sem serifa (vai mostrar qualquer uma padrão do navegador */
   font-weight: 100; /* deixa as letras mais finas ou grossas */
@@ -155,7 +155,7 @@ text-align: center;
 }
 
 .grupo h1 {
-  background: rgb(13, 92, 129);
+  background: #4b47ff;
   color: white; /* cor das LETRAS branca */
   font-family: sans-serif; /* fonte sem serifa (vai mostrar qualquer uma padrão do navegador */
   font-weight: 100; /* deixa as letras mais finas ou grossas */
